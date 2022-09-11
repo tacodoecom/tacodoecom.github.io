@@ -17,7 +17,7 @@ export const LoginPage = function (props: { api: Api; }) {
     const response = await api.login(username, password);
     if (response.ok()) {
       // const token = response.content;
-      navigate('/reminder');
+      navigate('/');
     }
   }
 
@@ -50,7 +50,7 @@ export const LoginPage = function (props: { api: Api; }) {
               <div className="mb-3 form-password-toggle">
                 <div className="d-flex justify-content-between">
                   <label className="form-label" htmlFor="password">Password</label>
-                  <a href="maintenance.html">
+                  <a href="/notfound">
                     <small>Forgot Password?</small>
                   </a>
                 </div>
@@ -85,7 +85,7 @@ export const LoginPage = function (props: { api: Api; }) {
             <p className="text-center">
               <span>New on our platform?</span>
               <span> </span>
-              <a href="maintenance.html">
+              <a href="/maintenance">
                 <span>Create an account</span>
               </a>
             </p>

@@ -26,7 +26,7 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "predeploy": "react-app-rewired build",
+    "predeploy": "react-app-rewired build && cp build/index.html build/404.html # a hack to force github pages to serve index.html on every route",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
