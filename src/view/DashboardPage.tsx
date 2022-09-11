@@ -8,7 +8,7 @@ import {useNonNegNumberWithThousandSep} from "../hook/format";
 
 const ReminderRow = function (props: { reminder: Reminder; }) {
   const reminder = props.reminder;
-  const [_, amountStr] = useNonNegNumberWithThousandSep(reminder.amount);
+  const amountStr = useNonNegNumberWithThousandSep(reminder.amount)[1];
   const statusToBootstrapStyle = function (status: ReminderStatus) {
     switch (status) {
       case ReminderStatus.PENDING:

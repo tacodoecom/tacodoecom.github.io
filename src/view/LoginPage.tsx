@@ -16,7 +16,7 @@ export const LoginPage = function (props: { api: Api; }) {
     e.preventDefault();
     const response = await api.login(username, password);
     if (response.ok()) {
-      const token = response.content;
+      // const token = response.content;
       navigate('/reminder');
     }
   }
